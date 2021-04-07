@@ -16,6 +16,7 @@ func main() {
 	m.SetPageMargins(20, 10, 20)
 
 	buildHeading(m)
+	buildFruitList(m)
 
 	err := m.OutputFileAndClose("pdf/raihan.pdf")
 	if err != nil {
@@ -52,6 +53,29 @@ func buildHeading(m pdf.Maroto) {
 			})
 		})
 	})
+}
+
+func buildFruitList(m pdf.Maroto) {
+	m.SetBackgroundColor(getTealColor())
+	m.Row(10, func() {
+		m.Col(12, func() {
+			m.Text("Products", props.Text{
+				Top:    2,
+				Size:   13,
+				Color:  color.NewWhite(),
+				Family: consts.Courier,
+				Style:  consts.Bold,
+				Align:  consts.Center,
+			})
+		})
+	})
+}
+func getTealColor() color.Color {
+	return color.Color{
+		Red:   3,
+		Green: 166,
+		Blue:  166,
+	}
 }
 
 func getDarkPurpleColor() color.Color {
