@@ -56,7 +56,7 @@ func buildHeading(m pdf.Maroto) {
 }
 
 func buildFruitList(m pdf.Maroto) {
-	tableHeading := []string{"Fruit", "Description", "Price"}
+	tableHeading := []string{"Fruit ", "Description", "Price"}
 	contents := [][]string{{"Apple", "Red and juicy", "2.00"}, {"Orange", "Orange and juicy", "3.00"}}
 
 	m.SetBackgroundColor(getTealColor())
