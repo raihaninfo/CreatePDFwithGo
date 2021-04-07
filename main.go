@@ -56,6 +56,9 @@ func buildHeading(m pdf.Maroto) {
 }
 
 func buildFruitList(m pdf.Maroto) {
+	tableHeading := []string{"Fruit", "Description", "Price"}
+	contents := [][]string{{"Apple", "Red and juicy", "2.00"}, {"Orange", "Orange and juicy", "3.00"}}
+
 	m.SetBackgroundColor(getTealColor())
 	m.Row(10, func() {
 		m.Col(12, func() {
@@ -69,7 +72,23 @@ func buildFruitList(m pdf.Maroto) {
 			})
 		})
 	})
+
+	m.SetBackgroundColor(color.NewWhite())
+	m.TableList(tableHeading, contents, props.TableList{
+		HeaderProp: props.TableListContent{
+			Size:      9,
+			GridSizes: []uint{3, 7, 2},
+		},
+		ContentProp: props.TableListContent{
+			Size:      8,
+			GridSizes: []uint{3, 7, 2},
+		},
+		Align:              consts.Left,
+		HeaderContentSpace: 1,
+		Line:               false,
+	})
 }
+
 func getTealColor() color.Color {
 	return color.Color{
 		Red:   3,
