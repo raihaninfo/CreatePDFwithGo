@@ -42,7 +42,7 @@ func buildHeading(m pdf.Maroto) {
 		})
 	})
 
-	headertext := " This Pdf for Google company"
+	headertext := " RM Web and software solutions"
 	m.Row(10, func() {
 		m.Col(12, func() {
 			m.Text(headertext, props.Text{
@@ -56,8 +56,9 @@ func buildHeading(m pdf.Maroto) {
 }
 
 func buildFruitList(m pdf.Maroto) {
-	tableHeading := []string{"Fruit ", "Description", "Price"}
-	contents := [][]string{{"Apple", "Red and juicy", "2.00"}, {"Orange", "Orange and juicy", "3.00"}}
+	tableHeading := []string{"Products ", "Description", "Price"}
+	contents := [][]string{{"Web Development", "using golang", "$1000"},
+		{"Mobile Apps", "Ousing Java Or golang", "$850"}, {"Desktop Apps", "using Golang", "$900"}}
 
 	m.SetBackgroundColor(getTealColor())
 	m.Row(10, func() {
