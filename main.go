@@ -75,7 +75,9 @@ func buildFruitList(m pdf.Maroto) {
 	})
 
 	m.SetBackgroundColor(color.NewWhite())
+
 	m.TableList(tableHeading, contents, props.TableList{
+
 		HeaderProp: props.TableListContent{
 			Size:      9,
 			GridSizes: []uint{3, 7, 2},
