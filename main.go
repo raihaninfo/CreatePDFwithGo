@@ -11,6 +11,7 @@ import (
 )
 
 func main() {
+
 	m := pdf.NewMaroto(consts.Portrait, consts.A4)
 	m.SetPageMargins(20, 10, 20)
 
@@ -39,10 +40,10 @@ func buildHeading(m pdf.Maroto) {
 			})
 		})
 	})
-
+	headertext := " This Pdf for Google company"
 	m.Row(10, func() {
 		m.Col(12, func() {
-			m.Text("This Pdf for google company", props.Text{
+			m.Text(headertext, props.Text{
 				Top:   3,
 				Style: consts.Bold,
 				Align: consts.Center,
