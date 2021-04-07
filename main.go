@@ -40,6 +40,7 @@ func buildHeading(m pdf.Maroto) {
 			})
 		})
 	})
+
 	headertext := " This Pdf for Google company"
 	m.Row(10, func() {
 		m.Col(12, func() {
