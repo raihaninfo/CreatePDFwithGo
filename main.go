@@ -36,7 +36,7 @@ func buildHeading(m pdf.Maroto) {
 					Percent: 75,
 				})
 				if err != nil {
-					fmt.Println("iamge file was not loded: ", err)
+					fmt.Println("iamge file was not loded:", err)
 				}
 			})
 		})
@@ -75,7 +75,6 @@ func buildFruitList(m pdf.Maroto) {
 	})
 
 	m.SetBackgroundColor(color.NewWhite())
-
 	m.TableList(tableHeading, contents, props.TableList{
 
 		HeaderProp: props.TableListContent{
