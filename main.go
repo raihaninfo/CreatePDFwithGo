@@ -11,7 +11,6 @@ import (
 )
 
 func main() {
-
 	m := pdf.NewMaroto(consts.Portrait, consts.A4)
 	m.SetPageMargins(20, 10, 20)
 
@@ -23,7 +22,6 @@ func main() {
 		fmt.Println("Could not save PDF:", err)
 		os.Exit(1)
 	}
-
 	fmt.Println("PDF saved successfully")
 }
 
