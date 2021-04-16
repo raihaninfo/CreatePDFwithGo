@@ -98,7 +98,6 @@ func getTealColor() color.Color {
 		Blue:  166,
 	}
 }
-
 func getDarkPurpleColor() color.Color {
 	return color.Color{
 		Red:   88,
